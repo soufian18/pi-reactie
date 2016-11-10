@@ -9,8 +9,9 @@ def checktrigger():
         return True
     else:
         return False
+    
 begin=input("Klik enter als je wil beginnen")
-if begin:
+if begin == "":
     starttime = time.time()
     while GPIO.input(11) == 0 or GPIO.input(13)== 0:
         checktrigger()
